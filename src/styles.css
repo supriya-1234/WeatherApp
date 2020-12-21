@@ -3,6 +3,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 
 .container {
@@ -11,7 +12,7 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 50vh;
+  height: 70vh;
 }
 
 .form {
@@ -72,9 +73,32 @@ li {
   list-style-type: none;
   text-align: center;
 }
-
+.page {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
 .weather_status li span {
   margin-left: 50px;
+}
+
+.header {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+}
+.cities {
+  margin-top: 30px;
+  height: 95%;
+}
+.cityWeather {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid black;
 }
 
 @media screen and (max-width: 700px) {
@@ -91,7 +115,7 @@ li {
     border-radius: 30px;
   }
   .container {
-    height: 90vh;
-    flex-direction: row;
+    width: 20px;
+    height: 30px;
   }
 }

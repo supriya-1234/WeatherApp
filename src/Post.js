@@ -5,7 +5,7 @@ const Post = ({ posts }) => {
     <>
       {posts.map((post, index) => {
         return (
-          <ul className="post">
+          <div className="cityWeather">
             <li key={index}>
               Temp : <span> {post.temp}° </span>
             </li>
@@ -18,7 +18,7 @@ const Post = ({ posts }) => {
             <li key={index}>
               Humidity : <span>{post.humidity}%</span>
             </li>
-          </ul>
+          </div>
         );
       })}
     </>

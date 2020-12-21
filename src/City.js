@@ -53,12 +53,14 @@ const City = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <>
-      <Post posts={currentPost} />
-      <Pagination
-        postPerPage={postPerPage}
-        totalPost={weatherData.length}
-        paginate={paginate}
-      />
+      <div className="page">
+        <Post posts={currentPost} />
+        <Pagination
+          postPerPage={postPerPage}
+          totalPost={weatherData.length}
+          paginate={paginate}
+        />
+      </div>
     </>
   );
 };
