@@ -18,9 +18,6 @@ const Post = ({ posts }) => {
             <li key={index}>
               Humidity : <span>{post.humidity}%</span>
             </li>
-            <li key={index}>
-              Wind : <span>{post.wind}km/s</span>
-            </li>
           </ul>
         );
       })}
