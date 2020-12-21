@@ -10,26 +10,32 @@ const City = () => {
   const postPerPage = 5;
   const cities = [
     { name: "London", id: 2643743 },
-    { name: "berlin", id: 2960 },
-    { name: "delhi", id: 3245 },
-    { name: "mumbai", id: 3530 },
-    { name: "seoul", id: 5174 },
-    { name: "tokyo", id: 7264 },
-    { name: "paris", id: 8084 },
-    { name: "amritsar", id: 9874 },
-    { name: "patna", id: 11263 },
-    { name: "new york", id: 11754 },
-    { name: "kabul", id: 12795 },
-    { name: "kyoto", id: 14177 },
-    { name: "mohali", id: 14256 },
-    { name: "brasilia", id: 18007 },
-    { name: "chandigarh", id: 18093 }
+    { name: "Ayn Ḩalāqīm", id: 2960 },
+    { name: "Taglag", id: 3245 },
+    { name: "Qabāghlū", id: 3530 },
+    { name: "Arīqah", id: 5174 },
+    { name: "Kalāteh-ye Dowlat", id: 7264 },
+    { name: "Behjatābād", id: 8084 },
+    { name: "Ţālesh Maḩalleh", id: 9874 },
+    { name: "Shahrīār Kandeh", id: 11263 },
+    { name: "Bālā Aḩmad Kolā", id: 11754 },
+    { name: "Aş Şūrah aş Şaghīrah", id: 12795 },
+    { name: "Āqdūz", id: 14177 },
+    { name: "Āzādshahr", id: 14256 },
+    { name: "Gollar", id: 18007 },
+    { name: "Dīgāleh", id: 18093 },
+
+    { name: "Qarālar-e Mīrzā Ḩoseynqolī", id: 18557 },
+    { name: "Protaras", id: 18918 },
+    { name: "Kahrīz", id: 23814 },
+    { name: "Nūrābād", id: 24851 },
+    { name: "Rokan Sarā", id: 29033 }
   ];
 
   useEffect(() => {
     const citiesString = cities.map((city) => city.id).join(",");
     axios
-      .get(
+      .post(
         `https://api.openweathermap.org/data/2.5/group?id=${citiesString}&appid=${API_KEY}`
       )
       .then((res) => {

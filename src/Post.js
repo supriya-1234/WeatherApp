@@ -1,10 +1,11 @@
 import React from "react";
+
 const Post = ({ posts }) => {
   return (
     <>
       {posts.map((post, index) => {
         return (
-          <ul>
+          <ul className="post">
             <li key={index}>
               Temp : <span> {post.temp}° </span>
             </li>
